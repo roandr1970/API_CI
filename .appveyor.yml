@@ -1,5 +1,7 @@
 version: 1.0.{build}
 
+image: Ubuntu
+
 stack: jdk 11  # версия JDK
 
 branches:
@@ -14,7 +16,8 @@ install:
   - java -jar ./artifacts/app-mbank.jar &
 
 build_script:
-
   - ./gradlew test --info  # запускаем тест, флаг --info позволяет выводить больше информации
+  - chmod +x gradlew
+
 
 
